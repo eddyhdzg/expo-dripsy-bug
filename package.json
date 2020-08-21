@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "dripsy": "^0.5.2",
     "expo": "~38.0.0",
     "next": "9.3.5",
+    "next-compose-plugins": "^2.2.0",
+    "next-transpile-modules": "^4.1.0",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
@@ -18,5 +21,10 @@
     "web": "expo web",
     "eject": "expo eject"
   },
-  "private": true
+  "private": true,
+  "resolutions": {
+    "@theme-ui/core": "0.4.0-rc.1",
+    "@theme-ui/css": "0.4.0-rc.1",
+    "@theme-ui/mdx": "0.4.0-rc.1"
+  }
 }

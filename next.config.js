@@ -1,8 +1,14 @@
-// @generated: @expo/next-adapter@2.1.0
-// Learn more: https://github.com/expo/expo/blob/master/docs/pages/versions/unversioned/guides/using-nextjs.md#withexpo
+const withPlugins = require("next-compose-plugins");
+const withTM = require("next-transpile-modules")([
+  "dripsy",
+  // you can add other packages here that need transpiling
+]);
 
-const { withExpo } = require('@expo/next-adapter');
+const { withExpo } = require("@expo/next-adapter");
 
-module.exports = withExpo({
-  projectRoot: __dirname,
-});
+module.exports = withPlugins(
+  [withTM],
+  withExpo({
+    projectRoot: __dirname,
+  })
+);
